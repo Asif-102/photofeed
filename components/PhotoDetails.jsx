@@ -8,7 +8,7 @@ export default async function PhotoDetails({ id, lang }) {
   const dictionary = await getDictionary(lang);
 
   return (
-    <div className="grid grid-cols-12 gap-4 2xl:gap-10 ">
+    <div className="grid grid-cols-12 gap-4 2xl:gap-10">
       <div className="col-span-12 lg:col-span-8 border rounded-xl">
         <Image
           className="max-w-full h-full max-h-[70vh] mx-auto"
