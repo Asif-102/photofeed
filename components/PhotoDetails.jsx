@@ -4,7 +4,6 @@ import Image from "next/image";
 export default async function PhotoDetails({ id, lang }) {
   const response = await fetch(`${process.env.BASE_API_URL}/photos/${id}`);
   const photo = await response.json();
-  console.log("🚀 ~ PhotoDetails ~ photo:", photo);
 
   const dictionary = await getDictionary(lang);
 
@@ -15,7 +14,7 @@ export default async function PhotoDetails({ id, lang }) {
           className="max-w-full h-full max-h-[70vh] mx-auto"
           src={photo.url}
           alt={photo.title}
-          width={900}
+          width={970}
           height={500}
         />
       </div>
@@ -107,7 +106,6 @@ export default async function PhotoDetails({ id, lang }) {
           </div>
         </div>
       </div>
-      {/* <!-- details card ends --> */}
     </div>
   );
 }
